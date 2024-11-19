@@ -27,6 +27,9 @@ jobs:
     - name: Build
       run: dotnet build src/Univertall/Univertall.csproj --configuration Release --no-restore
 
+    - name: Restore test project dependencies
+      run: dotnet restore tests/Univertall.Tests/Univertall.Tests.csproj
+
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
