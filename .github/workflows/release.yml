@@ -15,21 +15,33 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '9.0.x'
+        dotnet-version: |
+          6.0.x
+          7.0.x
+          8.0.x
+          9.0.x
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore src/Univertall/Univertall.csproj
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build src/Univertall/Univertall.csproj --configuration Release --no-restore
 
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
+    - name: Set version
+      id: version
+      run: |
+        if [[ $GITHUB_REF == refs/tags/* ]]; then
+          VERSION=${GITHUB_REF#refs/tags/v}
+        else
+          VERSION=1.0.0
+        fi
+        echo "::set-output name=version::$VERSION"
+
     - name: Pack
-      run: dotnet pack --configuration Release --no-build --output ./nupkg
+      run: dotnet pack src/Univertall/Univertall.csproj --configuration Release --no-build /p:PackageVersion=${{ steps.version.outputs.version }} --output ./nupkg
 
     - name: Publish to NuGet
-      env:
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: dotnet nuget push ./nupkg/*.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./nupkg/*.nupkg --skip-duplicate --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
