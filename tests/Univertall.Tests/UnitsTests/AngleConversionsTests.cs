@@ -1,6 +1,6 @@
 using Univertall.Units.Angle;
 
-namespace Univertall.Tests;
+namespace Univertall.Tests.UnitsTests;
 
 public class AngleConversionsTests
 {

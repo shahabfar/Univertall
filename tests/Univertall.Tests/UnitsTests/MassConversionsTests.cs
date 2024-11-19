@@ -1,6 +1,6 @@
 using Univertall.Units.Mass;
 
-namespace Univertall.Tests
+namespace Univertall.Tests.UnitsTests
 {
     public class MassConversionsTests
     {
