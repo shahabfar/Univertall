@@ -2,7 +2,7 @@
 
 # **UniVertAll**
 
-[![Publish to NuGet](https://github.com/shahabfar/Univertall/actions/workflows/publish.yml/badge.svg)](https://github.com/shahabfar/Univertall/actions/workflows/publish.yml)
+[![Publish to NuGet](https://github.com/shahabfar/Univertall/actions/workflows/release.yml/badge.svg)](https://github.com/shahabfar/Univertall/actions/workflows/release.yml)
 
 UniVertAll is a versatile unit conversion library for .NET developers. It supports a wide range of units and provides a fluent API for easy and intuitive conversions. The library is compatible with .NET 6, .NET 7, .NET 8, and .NET 9.
 
@@ -23,7 +23,6 @@ UniVertAll is a versatile unit conversion library for .NET developers. It suppor
 Install the UniVertAll library via NuGet:
 
 [![NuGet Version](https://img.shields.io/nuget/v/UniVertAll.svg)](https://www.nuget.org/packages/UniVertAll)
-[![NuGet Downloads](https://img.shields.io/nuget/dt/UniVertAll.svg)](https://www.nuget.org/packages/UniVertAll)
 
 ### Using .NET CLI:
 ```bash
