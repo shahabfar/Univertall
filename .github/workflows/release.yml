@@ -1,4 +1,4 @@
-name: Publish NuGet Package
+name: Publish Univertall NuGet Package
 
 on:
   release:
