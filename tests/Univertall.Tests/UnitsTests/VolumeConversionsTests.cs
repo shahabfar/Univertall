@@ -1,6 +1,6 @@
 using Univertall.Units.Volume;
 
-namespace Univertall.Tests;
+namespace Univertall.Tests.UnitsTests;
 
 public class VolumeConversionsTests
 {
