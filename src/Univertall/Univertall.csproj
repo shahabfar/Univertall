@@ -25,4 +25,7 @@
 		<ProductVersion>1.0.0</ProductVersion>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<None Include="univertall.png" Pack="true" PackagePath="" />
+	</ItemGroup>
 </Project>
