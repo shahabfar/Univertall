@@ -11,8 +11,14 @@ public enum TemperatureUnit
     Rankine,
     Delisle,
     Newton,
-    Réaumur,
-    Rømer
+    /// <summary>
+    /// Réaumur scale. This unit is not commonly used today.
+    /// </summary>
+    Reaumur,
+    /// <summary>
+    /// Rømer scale. This unit is not commonly used today.
+    /// </summary>
+    Romer
 }
 
 /// <summary>
@@ -36,8 +42,8 @@ public class TemperatureConverter : BaseUnivertall<TemperatureUnit>
             TemperatureUnit.Rankine => (value - 491.67) * 5 / 9,
             TemperatureUnit.Delisle => 100 - value * 2 / 3,
             TemperatureUnit.Newton => value * 100 / 33,
-            TemperatureUnit.Réaumur => value * 5 / 4,
-            TemperatureUnit.Rømer => (value - 7.5) * 40 / 21,
+            TemperatureUnit.Reaumur => value * 5 / 4,
+            TemperatureUnit.Romer => (value - 7.5) * 40 / 21,
             _ => throw new ArgumentOutOfRangeException(nameof(fromUnit), fromUnit, null)
         };
     }
@@ -58,8 +64,8 @@ public class TemperatureConverter : BaseUnivertall<TemperatureUnit>
             TemperatureUnit.Rankine => value * 9 / 5 + 491.67,
             TemperatureUnit.Delisle => (100 - value) * 3 / 2,
             TemperatureUnit.Newton => value * 33 / 100,
-            TemperatureUnit.Réaumur => value * 4 / 5,
-            TemperatureUnit.Rømer => value * 21 / 40 + 7.5,
+            TemperatureUnit.Reaumur => value * 4 / 5,
+            TemperatureUnit.Romer => value * 21 / 40 + 7.5,
             _ => throw new ArgumentOutOfRangeException(nameof(toUnit), toUnit, null)
         };
     }

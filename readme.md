@@ -1,16 +1,12 @@
 ﻿Here's your updated README with the requested table of supported units (including custom units):
 
----
-
 # **UniVertAll**
----
+
 [![Publish to NuGet](https://github.com/shahabfar/Univertall/actions/workflows/publish.yml/badge.svg)](https://github.com/shahabfar/Univertall/actions/workflows/publish.yml)
 
 UniVertAll is a versatile unit conversion library for .NET developers. It supports a wide range of units and provides a fluent API for easy and intuitive conversions. The library is compatible with .NET 6, .NET 7, .NET 8, and .NET 9.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
----
 
 ## **Features**
 
@@ -21,7 +17,6 @@ UniVertAll is a versatile unit conversion library for .NET developers. It suppor
 - **Compatible**: Works with multiple .NET versions.
 - **NuGet Distribution**: Easily installable via NuGet Package Manager.
 
----
 
 ## **Installation**
 
@@ -38,7 +33,6 @@ dotnet add package UniVertAll
 ### Using Package Manager:
 Search for `UniVertAll` in the NuGet Package Manager within Visual Studio and install it.
 
----
 
 ## **Supported Units**
 
@@ -59,7 +53,7 @@ Here’s a list of all the units supported by UniVertAll:
 | **Force**          | Newton, Kilonewton, Pound-Force, Ounce-Force                                                                                                                                           |
 | **Custom**         | CustomUnit (User-defined, such as UnitA, UnitB, etc.)                                                                                                                                  |
 
----
+##
 
 ## **Using Univertall**
 
@@ -102,7 +96,7 @@ double radians = degrees.ConvertAngle().From(AngleUnit.Degree).To(AngleUnit.Radi
 Console.WriteLine($"{degrees} Degrees is equal to {radians} Radians.");
 ```
 
----
+##
 
 ## **Extending with Custom Units**
 
@@ -142,13 +136,11 @@ double result = customConverter.Convert(5, CustomUnit.UnitA, CustomUnit.UnitB);
 Console.WriteLine($"5 UnitA is equal to {result} UnitB.");
 ```
 
----
 
 ## **Documentation**
 
 XML documentation is included for all public classes and methods, accessible in your IDE. You can generate documentation using tools like [DocFX](https://dotnet.github.io/docfx/) or [Sandcastle](https://github.com/EWSoftware/SHFB).
 
----
 
 ## **Contributing**
 
@@ -162,13 +154,11 @@ Contributions are welcome! To contribute:
 
 Ensure your code adheres to the project’s coding style and includes tests.
 
----
 
 ## **License**
 
 UniVertAll is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
 
----
 
 ## **Contact**
 
@@ -177,7 +167,7 @@ For questions or feedback:
 - Open an issue on the [GitHub repository](https://github.com/your-repo/UniVertAll).
 - We welcome your suggestions and contributions!
 
----
+##
 
 Thank you for using **UniVertAll**! We hope it simplifies your unit conversion needs. 😊
 
