@@ -62,8 +62,8 @@ UniVertAll uses a **fluent API** to provide intuitive and easy-to-use conversion
 using UnitConverter.Units.Length;
 
 double meters = 5000;
-double kilometers = meters.ConvertLength().From(LengthUnit.Meter).To(LengthUnit.Kilometer);
-Console.WriteLine($"{meters} Meters is equal to {kilometers} Kilometers.");
+double yards = meters.ConvertLength().From(LengthUnit.Meter).To(LengthUnit.Yard);
+Console.WriteLine($"{meters} Meters is equal to {yards} Yards.");
 ```
 
 ### **3. Volume Conversion**
