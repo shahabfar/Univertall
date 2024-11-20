@@ -1,5 +1,3 @@
-﻿Here's your updated README with the requested table of supported units (including custom units):
-
 # **UniVertAll**
 
 [![Publish to NuGet](https://github.com/shahabfar/Univertall/actions/workflows/release.yml/badge.svg)](https://github.com/shahabfar/Univertall/actions/workflows/release.yml)
