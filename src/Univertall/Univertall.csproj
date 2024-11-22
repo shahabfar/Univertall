@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net9.0;net8.0;net7.0;net6.0</TargetFrameworks>
@@ -7,7 +7,7 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>Univertall</PackageId>
-		<PackageVersion>1.0.0</PackageVersion>
+		<PackageVersion>1.1.0</PackageVersion>
 		<Authors>Majid Shahabfar</Authors>
 		<Description>Univertall is a versatile and comprehensive unit conversion library for .NET Core. It provides an easy-to-use API for converting between various units of measurement, including volume, pressure, length, mass, etc. Ideal for developers needing reliable unit conversion functionality in their applications.</Description>
 		<PackageTags>unit conversion; .NET; library</PackageTags>
@@ -20,14 +20,10 @@
 		<AssemblyCompany>Shahabfar</AssemblyCompany>
 		<AssemblyProduct>Univertall</AssemblyProduct>
 		<AssemblyCopyright>Majid Shahabfar 2024</AssemblyCopyright>
-		<AssemblyVersion>1.0.0</AssemblyVersion>
-		<FileVersion>1.0.0</FileVersion>
-		<ProductVersion>1.0.0</ProductVersion>
-		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<AssemblyVersion>1.1.0</AssemblyVersion>
+		<FileVersion>1.1.0</FileVersion>
+		<ProductVersion>1.1.0</ProductVersion>
+		<PackageReadmeFile>NugetReadme.md</PackageReadmeFile>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<None Include="univertall.png" Pack="true" PackagePath="" />
-		<None Include="..\..\readme.md" Pack="true" PackagePath="" />
-	</ItemGroup>
 </Project>

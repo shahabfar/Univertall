@@ -1,4 +1,4 @@
-# **UniVertAll**
+﻿# **UniVertAll**
 
 [![Publish to NuGet](https://github.com/shahabfar/Univertall/actions/workflows/release.yml/badge.svg)](https://github.com/shahabfar/Univertall/actions/workflows/release.yml)
 
@@ -35,19 +35,20 @@ Search for `UniVertAll` in the NuGet Package Manager within Visual Studio and in
 
 Here’s a list of all the units supported by UniVertAll:
 
-| **Category**      | **Units Supported**                                                                                                                                                                      |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Length**         | Meter, Kilometer, Centimeter, Millimeter, Micrometer, Nanometer, Inch, Foot, Yard, Mile, Nautical Mile                                                                                  |
-| **Mass**           | Kilogram, Gram, Milligram, Microgram, Ton, Metric Ton, Long Ton, Short Ton, Pound, Ounce, Stone, Carat                                                                                  |
+| **Category**      | **Units Supported**                                                                                                                                                                     |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Length**         | Meter, Kilometer, Centimeter, Millimeter, Micrometer, Nanometer, Inch, Foot, Yard, Mile, Nautical Mile                                                                                 |
+| **Mass**           | Kilogram, Gram, Milligram, Microgram, Ton, Metric Ton, Long Ton, Short Ton, Pound, Ounce, Stone, Carat                                                                                 |
 | **Volume**         | Cubic Meter, Liter, Milliliter, Gallon (US), Gallon (UK), Quart, Pint, Cup, Fluid Ounce, Tablespoon, Teaspoon                                                                          |
-| **Power**          | Watt, Kilowatt, Megawatt, Gigawatt, Horsepower (Metric), Horsepower (Imperial)                                                                                                          |
+| **Power**          | Watt, Kilowatt, Megawatt, Gigawatt, Horsepower (Metric), Horsepower (Imperial)                                                                                                         |
 | **Temperature**    | Celsius, Fahrenheit, Kelvin                                                                                                                                                            |
 | **Pressure**       | Pascal, Kilopascal, Bar, Atmosphere, Torr, PSI (Pounds per Square Inch)                                                                                                                |
-| **Volume Flow Rate** | Cubic Meter per Second, Liter per Second, Gallon per Minute (US), Gallon per Hour (US), Cubic Feet per Second, Cubic Feet per Minute, Cubic Inch per Second, Cubic Inch per Minute     |
+| **Volume Flow Rate** | Cubic Meter / Second, Liter/Second, Gallon/Minute (US), Gallon/Hour (US), Cubic Feet/Second, Cubic Feet/Minute, Cubic Inch/Second, Cubic Inch/Minute                                 |
 | **Angle**          | Degree, Radian, Gradian                                                                                                                                                                |
 | **Digital**        | Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, Petabyte, Exabyte                                                                                                                   |
-| **Fuel Economy**   | Miles per Gallon (US), Miles per Gallon (Imperial), Liters per 100 Kilometers, Kilometers per Liter                                                                                     |
+| **Fuel Economy**   | Miles/Gallon (US), Miles/Gallon (Imperial), Liters/100 Kilometers, Kilometers/Liter                                                                                                    |
 | **Force**          | Newton, Kilonewton, Pound-Force, Ounce-Force                                                                                                                                           |
+| **Speed**          | Kilometers/Hour, Kilonewton, Pound-Force, Ounce-Force                                                                                                                                  |
 | **Custom**         | CustomUnit (User-defined, such as UnitA, UnitB, etc.)                                                                                                                                  |
 
 ##
