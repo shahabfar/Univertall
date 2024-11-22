@@ -1,63 +1,172 @@
-# UniVertAll
+﻿# **UniVertAll**
 
-UniVertAll is a versatile unit conversion library for .NET developers. It supports a wide range of units and provides a fluent API for easy and intuitive conversions. The library is compatible with multiple .NET versions, including .NET 6, .NET 7, .NET 8, and .NET 9.
+[![Publish to NuGet](https://github.com/shahabfar/Univertall/actions/workflows/release.yml/badge.svg)](https://github.com/shahabfar/Univertall/actions/workflows/release.yml)
 
-## Features
+UniVertAll is a versatile unit conversion library for .NET developers. It supports a wide range of units and provides a fluent API for easy and intuitive conversions. The library is compatible with .NET 6, .NET 7, .NET 8, and .NET 9.
 
-- Comprehensive support for various units (length, mass, power, volume, etc.)
-- Fluent API for easy and intuitive conversions
-- Extensible with custom units and conversions
-- Robust error handling
-- Thread-safe
-- Compatible with multiple .NET versions
-- Packaged as a NuGet package for easy distribution
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Installation
+## **Features**
 
-You can install the UniVertAll library via NuGet:
+- **Comprehensive Support**: Includes various units (length, mass, power, temperature, volume, and more).
+- **Fluent API**: Simplifies unit conversion with an intuitive syntax.
+- **Customizable**: Extend the library with your own units and conversions.
+- **Thread-Safe**: Designed for concurrent applications.
+- **Compatible**: Works with multiple .NET versions.
+- **NuGet Distribution**: Easily installable via NuGet Package Manager.
 
 
-## Usage
+## **Installation**
 
-### Basic Conversion
+Install the UniVertAll library via NuGet:
 
-Here is an example of how to use the library for basic unit conversions:
+[![NuGet Version](https://img.shields.io/nuget/v/UniVertAll.svg)](https://www.nuget.org/packages/UniVertAll)
 
+### Using .NET CLI:
+```bash
+dotnet add package UniVertAll
+```
+
+### Using Package Manager:
+Search for `UniVertAll` in the NuGet Package Manager within Visual Studio and install it.
+
+
+## **Supported Units**
+
+Here’s a list of all the units supported by UniVertAll:
+
+| **Category**      | **Units Supported**                                                                                                                                                                     |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Length**         | Meter, Kilometer, Centimeter, Millimeter, Micrometer, Nanometer, Inch, Foot, Yard, Mile, Nautical Mile                                                                                 |
+| **Mass**           | Kilogram, Gram, Milligram, Microgram, Ton, Metric Ton, Long Ton, Short Ton, Pound, Ounce, Stone, Carat                                                                                 |
+| **Volume**         | Cubic Meter, Liter, Milliliter, Gallon (US), Gallon (UK), Quart, Pint, Cup, Fluid Ounce, Tablespoon, Teaspoon                                                                          |
+| **Power**          | Watt, Kilowatt, Megawatt, Gigawatt, Horsepower (Metric), Horsepower (Imperial)                                                                                                         |
+| **Temperature**    | Celsius, Fahrenheit, Kelvin                                                                                                                                                            |
+| **Pressure**       | Pascal, Kilopascal, Bar, Atmosphere, Torr, PSI (Pounds per Square Inch)                                                                                                                |
+| **Volume Flow Rate** | Cubic Meter / Second, Liter/Second, Gallon/Minute (US), Gallon/Hour (US), Cubic Feet/Second, Cubic Feet/Minute, Cubic Inch/Second, Cubic Inch/Minute                                 |
+| **Angle**          | Degree, Radian, Gradian                                                                                                                                                                |
+| **Digital**        | Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, Petabyte, Exabyte                                                                                                                   |
+| **Fuel Economy**   | Miles/Gallon (US), Miles/Gallon (Imperial), Liters/100 Kilometers, Kilometers/Liter                                                                                                    |
+| **Force**          | Newton, Kilonewton, Pound-Force, Ounce-Force                                                                                                                                           |
+| **Speed**          | Kilometers/Hour, Kilonewton, Pound-Force, Ounce-Force                                                                                                                                  |
+| **Custom**         | CustomUnit (User-defined, such as UnitA, UnitB, etc.)                                                                                                                                  |
+
+##
+
+## **Using Univertall**
+
+UniVertAll uses a **fluent API** to provide intuitive and easy-to-use conversions. Below are some examples showcasing its functionality:
+
+
+### **1. Length Conversion**
+```csharp
+using UnitConverter.Units.Length;
+
+double meters = 5000;
+double yards = meters.ConvertLength().From(LengthUnit.Meter).To(LengthUnit.Yard);
+Console.WriteLine($"{meters} Meters is equal to {yards} Yards.");
+```
+
+### **3. Volume Conversion**
+```csharp
+using UnitConverter.Units.Volume;
+
+double liters = 3.78541;
+double gallons = liters.ConvertVolume().From(VolumeUnit.Liter).To(VolumeUnit.Gallon);
+Console.WriteLine($"{liters} Liters is equal to {gallons} Gallons.");
+```
+
+### **4. Power Conversion**
+```csharp
 using UnitConverter.Units.Power;
-double valueInWatts = new PowerConversionBuilder(1.5) .From(PowerUnit.Kilowatt) .To(PowerUnit.Watt);
-Console.WriteLine($"1.5 Kilowatts is equal to {valueInWatts} Watts.");
 
+double watts = 746;
+double horsepower = watts.ConvertPower().From(PowerUnit.Watt).To(PowerUnit.MetricHorsepower);
+Console.WriteLine($"{watts} Watts is equal to {horsepower} Horsepower.");
+```
 
-### Extending with Custom Units
+### **6. Angle Conversion**
+```csharp
+using UnitConverter.Units.Angle;
 
-You can extend the library with custom units and conversions by inheriting from the `BaseUnitConverter` class.
+double degrees = 180;
+double radians = degrees.ConvertAngle().From(AngleUnit.Degree).To(AngleUnit.Radian);
+Console.WriteLine($"{degrees} Degrees is equal to {radians} Radians.");
+```
+
+##
+
+## **Extending with Custom Units**
+
+UniVertAll is highly extensible. You can define your custom units and conversions by inheriting from the `BaseUnitConverter` class, as shown above. This makes the library flexible and adaptable to unique domain-specific requirements. Here is an example:
+
+```csharp
+using UnitConverter.Base;
 
 public enum CustomUnit { UnitA, UnitB }
-public class CustomConverter : BaseUnitConverter { protected override double ToBaseUnit(double value, CustomUnit fromUnit) { // Implement conversion to base unit }
 
-protected override double FromBaseUnit(double value, CustomUnit toUnit)
+public class CustomConverter : BaseUnitConverter<CustomUnit>
 {
-    // Implement conversion from base unit
+    protected override double ToBaseUnit(double value, CustomUnit fromUnit)
+    {
+        return fromUnit switch
+        {
+            CustomUnit.UnitA => value * 10,  // Example: 1 UnitA = 10 Base Units
+            CustomUnit.UnitB => value / 2,  // Example: 1 UnitB = 0.5 Base Units
+            _ => throw new ArgumentOutOfRangeException(nameof(fromUnit), fromUnit, null)
+        };
+    }
+
+    protected override double FromBaseUnit(double value, CustomUnit toUnit)
+    {
+        return toUnit switch
+        {
+            CustomUnit.UnitA => value / 10,  // Convert Base Unit to UnitA
+            CustomUnit.UnitB => value * 2,   // Convert Base Unit to UnitB
+            _ => throw new ArgumentOutOfRangeException(nameof(toUnit), toUnit, null)
+        };
+    }
 }
 
+// Usage
+var customConverter = new CustomConverter();
+double result = customConverter.Convert(5, CustomUnit.UnitA, CustomUnit.UnitB);
+Console.WriteLine($"5 UnitA is equal to {result} UnitB.");
+```
 
-## Documentation
 
-The library includes XML documentation comments for all public classes and methods. You can view the documentation in your IDE or generate a documentation file using tools like Sandcastle.
+## **Documentation**
 
-## Contributing
+XML documentation is included for all public classes and methods, accessible in your IDE. You can generate documentation using tools like [DocFX](https://dotnet.github.io/docfx/) or [Sandcastle](https://github.com/EWSoftware/SHFB).
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes. Ensure that your code follows the existing coding style and includes unit tests.
 
-## License
+## **Contributing**
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Contributions are welcome! To contribute:
 
-## Contact
+1. Fork the repository.
+2. Create a new branch for your feature: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m "Add new feature"`.
+4. Push your branch: `git push origin feature-name`.
+5. Open a pull request.
 
-For any questions or feedback, please open an issue on the GitHub repository.
+Ensure your code adheres to the project’s coding style and includes tests.
+
+
+## **License**
+
+UniVertAll is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+
+
+## **Contact**
+
+For questions or feedback:
+
+- Open an issue on the [GitHub repository](https://github.com/your-repo/UniVertAll).
+- We welcome your suggestions and contributions!
+
+##
+
+Thank you for using **UniVertAll**! We hope it simplifies your unit conversion needs. 😊
 
 ---
-
-Thank you for using UniVertAll! We hope it makes your unit conversion tasks easier and more efficient.
-

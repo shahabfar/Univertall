@@ -6,6 +6,7 @@ using Univertall.Units.Length;
 using Univertall.Units.Mass;
 using Univertall.Units.Power;
 using Univertall.Units.Pressure;
+using Univertall.Units.Speed;
 using Univertall.Units.Temperature;
 using Univertall.Units.Volume;
 using Univertall.Units.VolumeFlowRate;
@@ -126,4 +127,10 @@ public static class ConversionExtensions
     {
         return new MassConversionBuilder(value);
     }
+
+    public static SpeedConversionBuilder ConvertSpeed(this double value)
+    {
+        return new SpeedConversionBuilder(value);
+    }
+
 }
