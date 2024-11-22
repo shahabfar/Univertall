@@ -1,6 +1,6 @@
 using Univertall.Units.VolumeFlowRate;
 
-namespace Univertall.Tests
+namespace Univertall.Tests.UnitsTests
 {
     public class VolumeFlowRateConverterTests
     {

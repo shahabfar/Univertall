@@ -1,6 +1,6 @@
 using Univertall.Units.Pressure;
 
-namespace Univertall.Tests;
+namespace Univertall.Tests.UnitsTests;
 
 public class PressureConversionsTests
 {

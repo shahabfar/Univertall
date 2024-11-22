@@ -1,6 +1,6 @@
 using Univertall.Units.Length;
 
-namespace Univertall.Tests;
+namespace Univertall.Tests.UnitsTests;
 
 public class LengthConversionsTests
 {

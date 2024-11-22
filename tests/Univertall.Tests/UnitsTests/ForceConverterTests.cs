@@ -1,6 +1,6 @@
 using Univertall.Units.Force;
 
-namespace Univertall.Tests
+namespace Univertall.Tests.UnitsTests
 {
     public class ForceConverterTests
     {
