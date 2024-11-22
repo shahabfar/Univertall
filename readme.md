@@ -48,7 +48,7 @@ Here’s a list of all the units supported by UniVertAll:
 | **Digital**        | Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, Petabyte, Exabyte                                                                                                                   |
 | **Fuel Economy**   | Miles/Gallon (US), Miles/Gallon (Imperial), Liters/100 Kilometers, Kilometers/Liter                                                                                                    |
 | **Force**          | Newton, Kilonewton, Pound-Force, Ounce-Force                                                                                                                                           |
-| **Speed**          | Kilometers/Hour, Kilonewton, Pound-Force, Ounce-Force                                                                                                                                  |
+| **Speed**          | Kilometers/Hour, Miles/Hour, Knots, Feet/Second, Yard/Hour, Mach                                                                                                                 |
 | **Custom**         | CustomUnit (User-defined, such as UnitA, UnitB, etc.)                                                                                                                                  |
 
 ##
