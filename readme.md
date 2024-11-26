@@ -101,7 +101,7 @@ Console.WriteLine($"{degrees} Degrees is equal to {radians} Radians.");
 UniVertAll is highly extensible. You can define your custom units and conversions by inheriting from the `BaseUnivertall` class, as shown above. This makes the library flexible and adaptable to unique domain-specific requirements. Here is an example:
 
 ```csharp
-using Univertall.Base;
+using Univertall;
 
 public enum CustomUnit { UnitA, UnitB }
 
