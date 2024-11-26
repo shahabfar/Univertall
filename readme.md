@@ -60,7 +60,7 @@ UniVertAll uses a **fluent API** to provide intuitive and easy-to-use conversion
 
 ### **1. Length Conversion**
 ```csharp
-using UnitConverter.Units.Length;
+using Univertall.Units.Length;
 
 double meters = 5000;
 double yards = meters.ConvertLength().From(LengthUnit.Meter).To(LengthUnit.Yard);
@@ -69,7 +69,7 @@ Console.WriteLine($"{meters} Meters is equal to {yards} Yards.");
 
 ### **3. Volume Conversion**
 ```csharp
-using UnitConverter.Units.Volume;
+using Univertall.Units.Volume;
 
 double liters = 3.78541;
 double gallons = liters.ConvertVolume().From(VolumeUnit.Liter).To(VolumeUnit.Gallon);
@@ -78,7 +78,7 @@ Console.WriteLine($"{liters} Liters is equal to {gallons} Gallons.");
 
 ### **4. Power Conversion**
 ```csharp
-using UnitConverter.Units.Power;
+using Univertall.Units.Power;
 
 double watts = 746;
 double horsepower = watts.ConvertPower().From(PowerUnit.Watt).To(PowerUnit.MetricHorsepower);
@@ -87,7 +87,7 @@ Console.WriteLine($"{watts} Watts is equal to {horsepower} Horsepower.");
 
 ### **6. Angle Conversion**
 ```csharp
-using UnitConverter.Units.Angle;
+using Univertall.Units.Angle;
 
 double degrees = 180;
 double radians = degrees.ConvertAngle().From(AngleUnit.Degree).To(AngleUnit.Radian);
@@ -98,14 +98,14 @@ Console.WriteLine($"{degrees} Degrees is equal to {radians} Radians.");
 
 ## **Extending with Custom Units**
 
-UniVertAll is highly extensible. You can define your custom units and conversions by inheriting from the `BaseUnitConverter` class, as shown above. This makes the library flexible and adaptable to unique domain-specific requirements. Here is an example:
+UniVertAll is highly extensible. You can define your custom units and conversions by inheriting from the `BaseUnivertall` class, as shown above. This makes the library flexible and adaptable to unique domain-specific requirements. Here is an example:
 
 ```csharp
-using UnitConverter.Base;
+using Univertall.Base;
 
 public enum CustomUnit { UnitA, UnitB }
 
-public class CustomConverter : BaseUnitConverter<CustomUnit>
+public class CustomConverter : BaseUnivertall<CustomUnit>
 {
     protected override double ToBaseUnit(double value, CustomUnit fromUnit)
     {
