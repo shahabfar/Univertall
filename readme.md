@@ -90,7 +90,7 @@ Console.WriteLine($"{watts} Watts is equal to {horsepower} Horsepower.");
 using Univertall.Units.Angle;
 
 double degrees = 180;
-double radians = degrees.ConvertAngle().From(AngleUnit.Degree).To(AngleUnit.Radian);
+double radians = degrees.ConvertAngle().From(AngleUnit.Degrees).To(AngleUnit.Radians);
 Console.WriteLine($"{degrees} Degrees is equal to {radians} Radians.");
 ```
 
